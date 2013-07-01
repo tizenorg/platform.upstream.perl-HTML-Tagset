@@ -6,6 +6,7 @@ Summary:        HTML::Tagset - data tables useful in parsing HTML
 Url:            http://search.cpan.org/dist/HTML-Tagset/
 Group:          Development/Libraries
 Source0:        HTML-Tagset-%{version}.tar.gz
+Source1001: 	perl-HTML-Tagset.manifest
 BuildRequires:  perl
 BuildArch:      noarch
 
@@ -15,6 +16,7 @@ HTML parsing operations, such as tag and entity names.
 
 %prep
 %setup -q -n HTML-Tagset-%{version}
+cp %{SOURCE1001} .
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
