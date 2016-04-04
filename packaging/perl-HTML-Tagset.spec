@@ -19,6 +19,9 @@ HTML parsing operations, such as tag and entity names.
 cp %{SOURCE1001} .
 
 %build
+export CFLAGS+=" -fvisibility=hidden"
+  export CXXFLAGS+=" -fvisibility=hidden"
+  
 perl Makefile.PL INSTALLDIRS=vendor
 make %{?_smp_mflags}
 
